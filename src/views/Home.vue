@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <div class="content flex">
+    <div class="content">
       <Product v-for="product in products" :data="product" :key="product.name"/>
     </div>
   </div>
@@ -50,7 +50,8 @@ export default {
 .hero {
   display: flex;
   align-items: center;
-  margin: 18px 17%;
+  /* margin: 18px 17%; */
+  margin: 18px;
   padding: 18px;
   border-radius: 8px;
   height: 240px;
@@ -65,8 +66,8 @@ export default {
   align-items: center;
 }
 #logo {
-  width: 120px;
-  height: 80px;
+  width: calc(240px / 2.8);
+  height: calc(160px / 2.8);
 }
 #text-wrapper {
   margin-left: 18px;
@@ -80,6 +81,17 @@ p {
   color: rgb(207, 207, 207)
 }
 .content {
-  margin: 18px 17%;
+  /* margin: 18px 17%; */
+  margin: 18px;
+}
+
+@media screen and (min-width: 1188px) {
+  .hero {
+    margin: 18px 14%;
+  }
+  .content {
+    margin: 18px 14%;
+    display: flex;
+  }
 }
 </style>

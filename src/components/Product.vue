@@ -16,20 +16,22 @@
 <style scoped>
 .product {
   display: flex;
-  width: 33.3%;
+  /* width: 33.3%; */
+  width: 100%;
   background-color: #eee;
-  height: 100px;
+  height: 110px;
   border-radius: 8px;
+  margin-bottom: 18px;
+  overflow: hidden;
 }
-.product:nth-of-type(2n) {
-  margin: 0 18px;
-}
+
 #text-wrapper {
   font-family: 'Poppins', sans-serif;
   padding: 8px;
 }
 #text-wrapper p {
-  font-size: 13px;
+  font-family: 'Mulish', sans-serif;
+  font-size: 12px;
   color: rgb(42, 42, 42)
 }
 .grid {
@@ -64,6 +66,16 @@ span.ripple {
   width: calc(143.33px / 2.8);
   height: calc(127.7px / 2.8);
 }
+
+@media screen and (min-width: 1188px) {
+  .product {
+    width: 33.3%;
+  }
+  .product:nth-of-type(2n) {
+    margin: 0 18px;
+  }
+}
+
 @keyframes ripple {
   to {
     transform: scale(4);
